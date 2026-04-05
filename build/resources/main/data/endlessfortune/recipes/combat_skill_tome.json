@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LNL",
+    "SBS",
+    "LNL"
+  ],
+  "key": {
+    "L": { "item": "endlessfortune:luck_crystal" },
+    "N": { "item": "minecraft:netherite_ingot" },
+    "S": { "item": "minecraft:netherite_sword" },
+    "B": { "item": "minecraft:book" }
+  },
+  "result": {
+    "item": "endlessfortune:combat_skill_tome",
+    "count": 1
+  }
+}

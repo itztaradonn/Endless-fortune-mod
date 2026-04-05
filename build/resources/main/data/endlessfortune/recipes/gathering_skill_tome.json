@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LNL",
+    "PBP",
+    "LNL"
+  ],
+  "key": {
+    "L": { "item": "endlessfortune:luck_crystal" },
+    "N": { "item": "minecraft:netherite_ingot" },
+    "P": { "item": "minecraft:netherite_pickaxe" },
+    "B": { "item": "minecraft:book" }
+  },
+  "result": {
+    "item": "endlessfortune:gathering_skill_tome",
+    "count": 1
+  }
+}
