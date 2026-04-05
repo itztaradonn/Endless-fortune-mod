@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "endlessfortune",
+  "version": "${version}",
+  "name": "Endless Fortune",
+  "description": "A luck-based skill system mod. Players receive random skills, unlock abilities through luck, and modify loot tables based on their fortune.",
+  "authors": ["EndlessFortune Team"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/endlessfortune/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.endless.fortune.EndlessFortune"],
+    "client": ["com.endless.fortune.EndlessFortuneClient"]
+  },
+  "mixins": ["endlessfortune.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

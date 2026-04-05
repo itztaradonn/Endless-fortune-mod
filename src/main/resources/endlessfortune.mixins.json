@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.endless.fortune.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "LootTableMixin",
+    "AdvancementMixin",
+    "PotionItemMixin",
+    "LivingEntityStatusEffectMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
