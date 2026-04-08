@@ -29,56 +29,47 @@ public class LootModifier {
         UPGRADE_MAP.put(Items.WOODEN_SWORD, Items.STONE_SWORD);
         UPGRADE_MAP.put(Items.STONE_SWORD, Items.IRON_SWORD);
         UPGRADE_MAP.put(Items.IRON_SWORD, Items.DIAMOND_SWORD);
-        UPGRADE_MAP.put(Items.DIAMOND_SWORD, Items.NETHERITE_SWORD);
 
         // Pickaxes
         UPGRADE_MAP.put(Items.WOODEN_PICKAXE, Items.STONE_PICKAXE);
         UPGRADE_MAP.put(Items.STONE_PICKAXE, Items.IRON_PICKAXE);
         UPGRADE_MAP.put(Items.IRON_PICKAXE, Items.DIAMOND_PICKAXE);
-        UPGRADE_MAP.put(Items.DIAMOND_PICKAXE, Items.NETHERITE_PICKAXE);
 
         // Axes
         UPGRADE_MAP.put(Items.WOODEN_AXE, Items.STONE_AXE);
         UPGRADE_MAP.put(Items.STONE_AXE, Items.IRON_AXE);
         UPGRADE_MAP.put(Items.IRON_AXE, Items.DIAMOND_AXE);
-        UPGRADE_MAP.put(Items.DIAMOND_AXE, Items.NETHERITE_AXE);
 
         // Shovels
         UPGRADE_MAP.put(Items.WOODEN_SHOVEL, Items.STONE_SHOVEL);
         UPGRADE_MAP.put(Items.STONE_SHOVEL, Items.IRON_SHOVEL);
         UPGRADE_MAP.put(Items.IRON_SHOVEL, Items.DIAMOND_SHOVEL);
-        UPGRADE_MAP.put(Items.DIAMOND_SHOVEL, Items.NETHERITE_SHOVEL);
 
         // Armor - Helmet
         UPGRADE_MAP.put(Items.LEATHER_HELMET, Items.CHAINMAIL_HELMET);
         UPGRADE_MAP.put(Items.CHAINMAIL_HELMET, Items.IRON_HELMET);
         UPGRADE_MAP.put(Items.IRON_HELMET, Items.DIAMOND_HELMET);
-        UPGRADE_MAP.put(Items.DIAMOND_HELMET, Items.NETHERITE_HELMET);
 
         // Armor - Chestplate
         UPGRADE_MAP.put(Items.LEATHER_CHESTPLATE, Items.CHAINMAIL_CHESTPLATE);
         UPGRADE_MAP.put(Items.CHAINMAIL_CHESTPLATE, Items.IRON_CHESTPLATE);
         UPGRADE_MAP.put(Items.IRON_CHESTPLATE, Items.DIAMOND_CHESTPLATE);
-        UPGRADE_MAP.put(Items.DIAMOND_CHESTPLATE, Items.NETHERITE_CHESTPLATE);
 
         // Armor - Leggings
         UPGRADE_MAP.put(Items.LEATHER_LEGGINGS, Items.CHAINMAIL_LEGGINGS);
         UPGRADE_MAP.put(Items.CHAINMAIL_LEGGINGS, Items.IRON_LEGGINGS);
         UPGRADE_MAP.put(Items.IRON_LEGGINGS, Items.DIAMOND_LEGGINGS);
-        UPGRADE_MAP.put(Items.DIAMOND_LEGGINGS, Items.NETHERITE_LEGGINGS);
 
         // Armor - Boots
         UPGRADE_MAP.put(Items.LEATHER_BOOTS, Items.CHAINMAIL_BOOTS);
         UPGRADE_MAP.put(Items.CHAINMAIL_BOOTS, Items.IRON_BOOTS);
         UPGRADE_MAP.put(Items.IRON_BOOTS, Items.DIAMOND_BOOTS);
-        UPGRADE_MAP.put(Items.DIAMOND_BOOTS, Items.NETHERITE_BOOTS);
 
         // Materials
         UPGRADE_MAP.put(Items.COAL, Items.IRON_INGOT);
         UPGRADE_MAP.put(Items.IRON_INGOT, Items.GOLD_INGOT);
         UPGRADE_MAP.put(Items.GOLD_INGOT, Items.DIAMOND);
-        UPGRADE_MAP.put(Items.DIAMOND, Items.EMERALD);
-        UPGRADE_MAP.put(Items.EMERALD, Items.NETHERITE_INGOT);
+        UPGRADE_MAP.put(Items.EMERALD, Items.DIAMOND);
 
         // Food
         UPGRADE_MAP.put(Items.BREAD, Items.COOKED_BEEF);
@@ -120,7 +111,8 @@ public class LootModifier {
             player.getEntityWorld().playSound(null, player.getBlockPos(),
                     SoundEvents.BLOCK_AMETHYST_BLOCK_CHIME, SoundCategory.PLAYERS, 1.0f, 1.0f);
             player.sendMessage(Text.literal("  ✧ ").formatted(Formatting.LIGHT_PURPLE)
-                    .append(Text.literal("Your luck influenced this loot!").formatted(Formatting.LIGHT_PURPLE, Formatting.ITALIC)));
+                    .append(Text.literal("Your luck influenced this loot!").formatted(Formatting.LIGHT_PURPLE,
+                            Formatting.ITALIC)));
         }
 
         return modifiedLoot;
@@ -148,7 +140,8 @@ public class LootModifier {
                 : original.getEnchantments();
 
         if (!enchantments.isEmpty()) {
-            ItemEnchantmentsComponent.Builder builder = new ItemEnchantmentsComponent.Builder(ItemEnchantmentsComponent.DEFAULT);
+            ItemEnchantmentsComponent.Builder builder = new ItemEnchantmentsComponent.Builder(
+                    ItemEnchantmentsComponent.DEFAULT);
             boolean changed = false;
 
             for (RegistryEntry<Enchantment> entry : enchantments.getEnchantments()) {
